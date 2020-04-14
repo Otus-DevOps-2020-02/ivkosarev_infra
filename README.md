@@ -6,4 +6,4 @@ bastion_IP = 35.205.201.59
 someinternalhost_IP = 10.132.0.3
 
 #ProxyJump
-#ssh -J ssh -J ivan@35.205.201.59 ivan@10.132.0.3
+#ssh -J ivan@35.205.201.59 ivan@10.132.0.3
