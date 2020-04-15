@@ -2,7 +2,7 @@
 
 ivkosarev Infra repository
 
-testapp_IP = 34.91.219.128
+testapp_IP = 34.77.129.82
 testapp_port = 9292
 
 bastion_IP = 35.205.201.59
