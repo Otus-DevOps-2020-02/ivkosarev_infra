@@ -1,7 +1,9 @@
 {
-"image_description":"000001",
-	"disk_size": "00000",
-	 "disk_type": "00000",
-	 "network":"ni45",
-	 "tags":"545454"
-}	 
+    "project_id": "infra",
+    "source_image_family": "ubuntu-1604-lts",
+    "image_description": "Image for homework 5",
+    "disk_size": "10",
+    "disk_type": "pd-standard",
+    "network": "default",
+    "tags": "puma-server"
+}

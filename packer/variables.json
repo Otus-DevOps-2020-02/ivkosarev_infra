@@ -1,9 +1,9 @@
 {
-	"image_description":"000001",
-	"disk_size": "10",
-	 "disk_type": "pd-standard",
-	 "network":"nic0",
-	 "tags":"puma-server"
-
-
+    "project_id": "infra-271212",
+    "source_image_family": "ubuntu-1604-lts",
+    "image_description": "Image for otus",
+    "disk_size": "10",
+    "disk_type": "pd-standard",
+    "network": "default",
+    "tags": "puma-server"
 }
