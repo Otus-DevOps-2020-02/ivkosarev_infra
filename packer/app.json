@@ -1,40 +1,26 @@
+
 {
-    "variables": {
-      "source_image_family": "ubuntu-1604-lts",
-      "project_id": "",
-      "machine_type": "",
-      "disk_size": "0",
-      "disk_type": "",
-      "network": "",
-      "tags":""
-     },
-  
-      "builders": [
-          {
-              "type": "googlecompute",
-              "project_id": "infra-271212",
-              "image_name": "reddit-base-{{timestamp}}",
-              "image_family": "reddit-base",
-              "source_image_family": "{{user `source_image_family`}}",
-              "zone": "europe-west1-b",
-              "ssh_username": "appuser",
-              "machine_type": "{{user `machine_type`}}",
-              "disk_size": "{{user `disk_size`}}",
-              "disk_type": "{{user `disk_type`}}",
-              "tags":"{{user `tags`}}"
-          }
-      ],
-      "provisioners": [
-          {
-              "type": "shell",
-              "script": "scripts/install_ruby.sh",
-              "execute_command": "sudo {{.Path}}"
-          },
-          {
-              "type": "shell",
-              "script": "scripts/install_mongodb.sh",
-              "execute_command": "sudo {{.Path}}"
-          }
-      ]
-  }
-  
+    "builders": [
+        {
+            "type": "googlecompute",
+            "project_id": "{{user `user_project_id`}}",
+            "image_name": "reddit-app-base-{{timestamp}}",
+            "image_family": "reddit-app-base",
+            "source_image_family": "{{user `user_source_image_family`}}",
+            "zone": "europe-west1-b",
+            "ssh_username": "appuser",
+            "machine_type": "{{user `user_machine_type`}}",
+            "image_description" : "Some image with ruby",
+            "disk_size" : "12",
+            "network" : "default",
+            "tags" : "puma-server"
+        }
+    ],
+    "provisioners": [
+        {
+            "type": "shell",
+            "script": "scripts/install_ruby.sh",
+            "execute_command": "sudo {{.Path}}"
+        }
+    ]
+}
