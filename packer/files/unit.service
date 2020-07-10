@@ -1,0 +1,11 @@
+[Unit]
+Description=Routing Settings Service
+After=network.target
+
+[Service]
+Type=oneshot
+User=root
+ExecStart=/root/routing.sh
+
+[Install]
+WantedBy=multi-user.target
