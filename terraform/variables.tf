@@ -21,7 +21,3 @@ variable zone {
   description = "Zone for VM"
   default     = "europe-west1-d"
 }
-variable ncount {
-  description = "Count for VM"
-  default     = "1"
-}
