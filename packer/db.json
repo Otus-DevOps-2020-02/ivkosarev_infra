@@ -1,5 +1,4 @@
 
-{
     "builders": [
         {
             "type": "googlecompute",
