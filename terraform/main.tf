@@ -21,10 +21,9 @@ resource "google_compute_project_metadata" "ssh-keys" {
 }
 
 resource "google_compute_instance" "app" {
-  count        = var.ncount
-  name         = "reddit-app-${count.index}"
+  name         = "reddit-app"
   machine_type = "g1-small"
-  zone         = var.zone
+  zone         = "europe-west1-b"
   tags         = ["reddit-app"]
   boot_disk {
     initialize_params {
