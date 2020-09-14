@@ -28,3 +28,9 @@ gcloud compute firewall-rules create default-puma-server\
   --rules=tcp:9292 \
   --source-ranges=0.0.0.0/0 \
   --target-tags=puma-server
+  
+  
+Сборка образов при помощи Packer
+Был собран базовый образ с помощью Packer, с установленным Ruby и MongoDB
+Из образа был запущен инстанс ВМ и вручную установлено приложение
+Изучен механизм параметризации шаблонов Packer, для примера приложен файл variables.json.example

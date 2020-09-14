@@ -1,5 +1,8 @@
 {
     "project_id": "infra-271212",
+    "user_project_id" : "infra-271212",
+	"user_source_image_family" : "ubuntu-1604-lts",
+	"user_machine_type" : "f1-micro",
     "source_image_family": "ubuntu-1604-lts",
     "image_description": "Image for homework 5",
     "disk_size": "10",
