@@ -12,8 +12,6 @@ provider "google" {
 
   region = var.region
 }
-<<<<<<< Updated upstream
-=======
 
 resource "google_compute_project_metadata" "ssh-keys" {
   metadata = {
@@ -91,4 +89,3 @@ resource "google_compute_firewall" "firewall_ssh" {
 resource "google_compute_address" "app_ip" {
   name = "reddit-app-ip"
 }
->>>>>>> Stashed changes
